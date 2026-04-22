@@ -110,9 +110,11 @@ http://localhost:5173
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
 * Ruben Ledesma
+* Rodrigo Espinosa
+* Santiago Romano
 
 ---
 
