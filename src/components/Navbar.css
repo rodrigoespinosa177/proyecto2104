@@ -1,0 +1,37 @@
+.navbar {
+  background-color: #1a1a1a !important;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar-logo {
+  font-family: monospace !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3rem !important;
+  color: #90caf9 !important;
+  text-decoration: none !important;
+  font-size: 1.5rem !important;
+}
+
+.navbar-icon {
+  color: #90caf9 !important;
+}
+
+.navbar-button {
+  color: white !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+  font-size: 1rem !important;
+}
+
+.navbar-button:hover {
+  background-color: #333 !important;
+  color: #90caf9 !important;
+}
+
+.navbar-menu-item {
+  color: white !important;
+}
+
+.navbar-menu-item:hover {
+  background-color: #333 !important;
+}
