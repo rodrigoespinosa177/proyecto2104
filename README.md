@@ -1,16 +1,121 @@
-# React + Vite
+# 📌 Proyecto React - Listas y Tareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Descripción
 
-Currently, two official plugins are available:
+Este proyecto es una aplicación web desarrollada con React que permite navegar entre distintas vistas utilizando rutas.
+Incluye funcionalidades como renderizado de listas de personas con filtros y una lista de tareas con manejo de estado y renderizado condicional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* React Router DOM
+* Material UI (MUI)
+* JavaScript (ES6+)
+* CSS
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 Funcionalidades
+
+### 🏠 Home
+
+* Pantalla principal con diseño tipo *hero*
+* Introducción al proyecto
+
+### 👥 Listas de personas
+
+* Renderizado dinámico de datos desde un archivo (`data.js`)
+* Búsqueda por nombre
+* Filtro por profesión
+* Mensaje cuando no hay resultados
+
+### ✅ Lista de tareas
+
+* Visualización de tareas
+* Cambio de estado (completada / no completada)
+* Renderizado condicional:
+
+  * Si no hay tareas → muestra mensaje
+  * Si hay tareas → muestra listado
+* Estilo dinámico (tachado cuando está completada)
+
+### 🧭 Navegación
+
+* Navbar responsive con Material UI
+* Navegación entre páginas sin recargar (SPA)
+* Uso de `useNavigate` de React Router
+
+---
+
+## 📂 Estructura del proyecto
+
+```
+src/
+│
+├── components/
+│   └── Navbar.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Lista.jsx
+│   ├── Tarea.jsx
+│   ├── data.js
+│
+├── App.jsx
+├── main.jsx
+```
+
+---
+
+## ⚙️ Instalación y ejecución
+
+1. Clonar el repositorio:
+
+```
+git clone <URL_DEL_REPO>
+```
+
+2. Instalar dependencias:
+
+```
+npm install
+```
+
+3. Ejecutar el proyecto:
+
+```
+npm run dev
+```
+
+4. Abrir en el navegador:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🧠 Conceptos aplicados
+
+* Componentes en React
+* Hooks (`useState`)
+* Renderizado condicional
+* Manejo de listas (`map`, `filter`)
+* Routing con React Router
+* Separación de componentes
+* Estilado con CSS y Material UI
+
+---
+
+## 👨‍💻 Autor
+
+* Ruben Ledesma
+
+---
+
+## 📌 Notas
+
+Este proyecto fue realizado con fines educativos para practicar conceptos fundamentales de React como el manejo del estado, navegación y renderizado dinámico.

@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background-color: #0a0a0a;
+}
+
+/* HERO */
+.hero-section {
+  height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=1600');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px; 
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  color: #FFD700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  margin-bottom: 20px; 
+  max-width: 900px;   
+  line-height: 1.3;   
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+/* HISTORIA */
+.historia-section {
+  padding: 60px 40px;
+  background: #111;
+}
+
+.historia-section h2 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.historia-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.historia-text {
+  flex: 1;
+}
+
+.historia-text p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #ccc;
+}
+
+.historia-img {
+  flex: 1;
+}
+
+.historia-img img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.2);
+}
+
+/* CARDS */
+.features-section {
+  padding: 60px 40px;
+  background: #0a0a0a;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #FFD700;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.card span {
+  font-size: 2.5rem;
+}
+
+.card h3 {
+  color: #FFD700;
+  margin: 10px 0;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* CTA */
+.cta-section {
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  text-align: center;
+  border-top: 3px solid #FFD700;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
