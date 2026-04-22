@@ -5,16 +5,17 @@ import heroImg from "./assets/hero.png";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Lista from "./pages/Lista";
-import Tarea from ".pages/Tarea";
+import Lista from "./pages/lista";
+import Tarea from "./pages/Tarea";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} /> //cuando la url es /, muestra la
-      home
+      <Route path="/" element={<Home />} />
+      {/* Cuando la url es /, muestra la
+      home */}
       <Route path="/listas" element={<Lista />} />
       <Route path="/tareas" element={<Tarea />} />
     </Routes>
