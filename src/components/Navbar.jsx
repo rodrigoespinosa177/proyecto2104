@@ -9,7 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
@@ -37,7 +36,7 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
 
           {/* DESKTOP - logo e ícono */}
-          <SportsSoccerIcon className="navbar-icon" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          
           <Typography
             variant="h6"
             noWrap
@@ -86,7 +85,7 @@ function ResponsiveAppBar() {
           </Box>
 
           {/* MOBILE - logo e ícono */}
-          <SportsSoccerIcon className="navbar-icon" sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+     
           <Typography
             variant="h5"
             noWrap
