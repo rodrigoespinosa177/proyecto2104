@@ -14,8 +14,8 @@ import './Navbar.css';
 
 const pages = [ //creamos un array para recorrer las paginas 
   { label: 'Home', path: '/' }, //con el path podemos acceder a las rutas que se navegan cuando hacemos click
-  { label: 'Listas', path: '/listas' },
-  { label: 'Condicional', path: '/condicional' },
+  { label: 'Listas de personas', path: '/listas' },
+  { label: 'Listas de tareas', path: '/tarea' },
 ];
 
 function ResponsiveAppBar() {

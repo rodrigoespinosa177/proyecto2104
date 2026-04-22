@@ -5,7 +5,7 @@ import heroImg from "./assets/hero.png";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Lista from "./pages/lista";
+import Lista from "./pages/Lista";
 import Tarea from "./pages/Tarea";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       {/* Cuando la url es /, muestra la
       home */}
       <Route path="/listas" element={<Lista />} />
-      <Route path="/tareas" element={<Tarea />} />
+      <Route path="/tarea" element={<Tarea />} />
     </Routes>
   );
 }
