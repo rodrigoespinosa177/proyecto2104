@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { people } from './data.js';
+import './Lista.css';
 
 export default function List() {
   const [busqueda, setBusqueda] = useState('');
@@ -14,42 +15,41 @@ export default function List() {
       return coincideBusqueda && coincideProfesion;
     })
     .map(person =>
-      <li key={person.id}>
+      <li key={person.id} className="list-item">
         <p>
           <b>{person.name}</b>
-          {' ' + person.profession + ' '}
-          conocido/a por {person.accomplishment}
+          {' · ' + person.profession + ' · '}
+          <span>conocido/a por {person.accomplishment}</span>
         </p>
       </li>
     );
 
   return (
-    <div>
-      {/* Buscador */}
+    <div className="list-container">
+
       <input
         type="text"
-        placeholder="Buscar por nombre..."
+        placeholder="🔍 Buscar por nombre..."
         value={busqueda}
         onChange={e => setBusqueda(e.target.value)}
+        className="list-buscador"
       />
 
-      {/* Botones de profesión */}
-      <div>
+      <div className="list-botones">
         {profesiones.map(prof => (
           <button
             key={prof}
             onClick={() => setProfesionFiltro(prof)}
-            style={{ fontWeight: profesionFiltro === prof ? 'bold' : 'normal' }}
+            className={`list-boton ${profesionFiltro === prof ? 'activo' : ''}`}
           >
             {prof}
           </button>
         ))}
       </div>
 
-      {/* Lista */}
       {listItems.length > 0
-        ? <ul>{listItems}</ul>
-        : <p>No se encontraron resultados</p>
+        ? <ul className="list-ul">{listItems}</ul>
+        : <p className="list-vacio">No se encontraron resultados</p>
       }
     </div>
   );
