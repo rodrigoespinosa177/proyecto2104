@@ -35,3 +35,5 @@ export const ThemeProvider = ({ children }) => {
 
 // Hook personalizado para consumir el contexto
 export const useTheme = () => useContext(ThemeContext);
+
+// Comentario
