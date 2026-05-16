@@ -60,5 +60,9 @@
     "contrasena": "Password",
     "nombre": "Name",
     "ingresar": "Sign In"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
   }
 }
