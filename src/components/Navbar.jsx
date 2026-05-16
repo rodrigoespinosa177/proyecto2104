@@ -10,14 +10,15 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 import ThemeToggle from "./ThemeToggle";
 
 const pages = [
   //creamos un array para recorrer las paginas
-  { label: "Home", path: "/" }, //con el path podemos acceder a las rutas que se navegan cuando hacemos click
-  { label: "Listas de personas", path: "/listas" },
-  { label: "Listas de tareas", path: "/tarea" },
+  { label: "navbar.home", path: "/" }, //con el path podemos acceder a las rutas que se navegan cuando hacemos click
+  { label: "navbar.listas", path: "/listas" },
+  { label: "navbar.tarea", path: "/tarea" },
 ];
 
 function ResponsiveAppBar() {
@@ -92,7 +93,7 @@ function ResponsiveAppBar() {
                     }}
                   >
                     <Typography sx={{ textAlign: "center" }}>
-                      {page.label}
+                      {t(page.label)}
                     </Typography>
                   </MenuItem>
                 ),
@@ -130,9 +131,12 @@ function ResponsiveAppBar() {
           </Box>
 
           {/* BOTÓN CAMBIO DE IDIOMA */}
-          <Button className="navbar-button navbar-lang-btn" onClick={toggleIdioma} sx={{ my: 2, px: 2 }}>
-            {i18n.language === 'es' ? 'EN' : 'ES'}
-          </Button>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <ThemeToggle />
+            <Button className="navbar-button navbar-lang-btn" onClick={toggleIdioma} sx={{ my: 2, px: 2 }}>
+              {i18n.language === 'es' ? 'EN' : 'ES'}
+            </Button>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
