@@ -2,7 +2,9 @@
   "navbar": {
     "home": "Inicio",
     "auth": "Iniciar Sesión / Registro",
-    "teams": "Equipos"
+    "teams": "Equipos",
+    "listas": "Listas de personas",
+    "tarea": "Listas de tareas"
   },
   "home": {
     "titulo": "Equipos de Fútbol Argentino",

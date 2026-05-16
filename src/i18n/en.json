@@ -2,7 +2,9 @@
   "navbar": {
     "home": "Home",
     "auth": "Login / Register",
-    "teams": "Teams"
+    "teams": "Teams",
+    "listas": "People lists",
+    "tarea": "Task lists"
   },
   "home": {
     "titulo": "Argentine Football Teams",
