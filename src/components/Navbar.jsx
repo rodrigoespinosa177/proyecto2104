@@ -12,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import ThemeToggle from "./ThemeToggle";
+import { useTranslation } from "react-i18next";
 
 const pages = [
   //creamos un array para recorrer las paginas
@@ -34,7 +35,7 @@ function ResponsiveAppBar() {
   };
 
   const toggleIdioma = () => {
-    const nuevoIdioma = i18n.language === 'es' ? 'en' : 'es'; //si el idioma actual es español, cambia a ingles y viceversa
+    const nuevoIdioma = i18n.language === "es" ? "en" : "es"; //si el idioma actual es español, cambia a ingles y viceversa
     i18n.changeLanguage(nuevoIdioma); //cambia el idioma de toda la app
   };
 
@@ -128,10 +129,14 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
+          <ThemeToggle />
           {/* BOTÓN CAMBIO DE IDIOMA */}
-          <Button className="navbar-button navbar-lang-btn" onClick={toggleIdioma} sx={{ my: 2, px: 2 }}>
-            {i18n.language === 'es' ? 'EN' : 'ES'}
+          <Button
+            className="navbar-button navbar-lang-btn"
+            onClick={toggleIdioma}
+            sx={{ my: 2, px: 2 }}
+          >
+            {i18n.language === "es" ? "EN" : "ES"}
           </Button>
         </Toolbar>
       </Container>
