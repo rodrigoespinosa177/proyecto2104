@@ -8,17 +8,29 @@
   width: 100%;
   padding: 10px 14px;
   border-radius: 8px;
-  border: 1px solid #3a3a5c;
-  background-color: #1e1e2e;
-  color: #e0e0e0;
+
+  border: 1px solid var(--border);
+
+  background-color: var(--surface);
+
+  color: var(--text);
+
   font-size: 15px;
+
   margin-bottom: 14px;
+
   box-sizing: border-box;
+
   outline: none;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .list-buscador::placeholder {
-  color: #888;
+  color: var(--text);
 }
 
 .list-botones {
@@ -30,18 +42,35 @@
 
 .list-boton {
   padding: 6px 14px;
+
   border-radius: 20px;
-  border: 1px solid #3a3a5c;
-  background-color: #1e1e2e;
-  color: #e0e0e0;
+
+  border: 1px solid var(--border);
+
+  background-color: var(--surface);
+
+  color: var(--text);
+
   font-size: 13px;
+
   cursor: pointer;
-  transition: all 0.2s;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.list-boton:hover {
+  transform: translateY(-2px);
 }
 
 .list-boton.activo {
-  background-color: #7eb8f7;
-  color: #000;
+  background-color: var(--accent);
+
+  color: var(--bg);
+
   font-weight: bold;
 }
 
@@ -52,27 +81,38 @@
 
 .list-item {
   list-style: none;
-  background-color: #1e1e2e;
-  border: 1px solid #3a3a5c;
+
+  background-color: var(--surface);
+
+  border: 1px solid var(--border);
+
   border-radius: 10px;
+
   padding: 12px 18px;
+
   margin-bottom: 10px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .list-item p {
   margin: 0;
-  color: #e0e0e0;
+
+  color: var(--text);
 }
 
 .list-item b {
-  color: #7eb8f7;
+  color: var(--accent);
 }
 
 .list-item span {
-  color: #aaa;
+  color: var(--text);
 }
 
 .list-vacio {
-  color: #aaa;
+  color: var(--text);
+
   text-align: center;
 }
