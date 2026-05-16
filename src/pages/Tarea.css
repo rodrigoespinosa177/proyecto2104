@@ -1,46 +1,43 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--bg);
-  color: var(--text-h);
-  text-align: center;
-}
-
-h1 {
-  margin-top: 20px;
-}
-
 .tarea-container {
-  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 4vw;
+  box-sizing: border-box;
 }
 
 .tarea {
   background-color: var(--code-bg);
   border-radius: 10px;
-  padding: 15px;
-  margin: 10px auto;
-  width: 280px;
+  padding: 20px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 28px;
 }
 
 .tarea p {
   margin: 0;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .completada {
   display: block;
-  margin-top: 5px;
+  margin-top: 10px;
   color: #4caf50;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 600;
 }
+
 
 button {
   margin-top: 10px;
-  padding: 8px 12px;
+  padding: 12px 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 18px;
   transition: 0.2s;
 }
 
