@@ -22,6 +22,7 @@ const pages = [
 
 function ResponsiveAppBar() {
   const navigate = useNavigate(); //inicializamos el hook de la navegacion, que nos permite redirigirnos a otra pagina
+  const { t, i18n } = useTranslation(); //t es la funcion que traduce los textos, i18n es el objeto que maneja el idioma actual
   const [anchorElNav, setAnchorElNav] = React.useState(null); //guardamos el elemento del dom donde se ancla el menu mobile
 
   const handleOpenNavMenu = (event) => {
@@ -30,6 +31,11 @@ function ResponsiveAppBar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const toggleIdioma = () => {
+    const nuevoIdioma = i18n.language === 'es' ? 'en' : 'es'; //si el idioma actual es español, cambia a ingles y viceversa
+    i18n.changeLanguage(nuevoIdioma); //cambia el idioma de toda la app
   };
 
   return (
@@ -118,11 +124,15 @@ function ResponsiveAppBar() {
                 onClick={() => navigate(page.path)}
                 sx={{ my: 2, display: "block", px: 2 }}
               >
-                {page.label}
+                {t(page.label)} {/* t() traduce la clave al idioma actual */}
               </Button>
             ))}
           </Box>
-          <ThemeToggle />
+
+          {/* BOTÓN CAMBIO DE IDIOMA */}
+          <Button className="navbar-button navbar-lang-btn" onClick={toggleIdioma} sx={{ my: 2, px: 2 }}>
+            {i18n.language === 'es' ? 'EN' : 'ES'}
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>
