@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { people } from './data.js';
 import './Lista.css';
 
 export default function List() {
+  const { t } = useTranslation();
   const [busqueda, setBusqueda] = useState('');
   const [profesionFiltro, setProfesionFiltro] = useState('todas');
 
@@ -14,22 +16,24 @@ export default function List() {
       const coincideProfesion = profesionFiltro === 'todas' || person.profession === profesionFiltro;
       return coincideBusqueda && coincideProfesion;
     })
-    .map(person =>
+    .map(person => (
       <li key={person.id} className="list-item">
         <p>
           <b>{person.name}</b>
-          {' · ' + person.profession + ' · '}
-          <span>conocido/a por {person.accomplishment}</span>
+          {' · ' + t(`profession.${person.profession}`) + ' · '}
+          <span>
+            {t('list.knownFor', { accomplishment: t(`accomplishment.${person.accomplishment}`) })}
+          </span>
         </p>
       </li>
-    );
+    ));
 
   return (
     <div className="list-container">
 
       <input
         type="text"
-        placeholder="🔍 Buscar por nombre..."
+        placeholder={t('list.searchPlaceholder')}
         value={busqueda}
         onChange={e => setBusqueda(e.target.value)}
         className="list-buscador"
@@ -42,14 +46,14 @@ export default function List() {
             onClick={() => setProfesionFiltro(prof)}
             className={`list-boton ${profesionFiltro === prof ? 'activo' : ''}`}
           >
-            {prof}
+            {t(`profession.${prof}`)}
           </button>
         ))}
       </div>
 
       {listItems.length > 0
         ? <ul className="list-ul">{listItems}</ul>
-        : <p className="list-vacio">No se encontraron resultados</p>
+        : <p className="list-vacio">{t('list.noResults')}</p>
       }
     </div>
   );
