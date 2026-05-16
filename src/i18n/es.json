@@ -1,0 +1,19 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "auth": "Iniciar Sesión / Registro",
+    "teams": "Equipos"
+  },
+  "home": {
+    "titulo": "Equipos de Fútbol Argentino",
+    "subtitulo": "La pasión que mueve a todo un país"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "registro": "Registrarse",
+    "email": "Email",
+    "contrasena": "Contraseña",
+    "nombre": "Nombre",
+    "ingresar": "Ingresar"
+  }
+}

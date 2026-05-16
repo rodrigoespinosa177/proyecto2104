@@ -10,16 +10,18 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; //importamos el hook de traduccion de react-i18next
 import './Navbar.css';
 
 const pages = [ //creamos un array para recorrer las paginas 
-  { label: 'Home', path: '/' }, //con el path podemos acceder a las rutas que se navegan cuando hacemos click
-  { label: 'Listas de personas', path: '/listas' },
-  { label: 'Listas de tareas', path: '/tarea' },
+  { label: 'navbar.home', path: '/' }, //con el path podemos acceder a las rutas que se navegan cuando hacemos click
+  { label: 'navbar.auth', path: '/listas' },
+  { label: 'navbar.teams', path: '/tarea' },
 ];
 
 function ResponsiveAppBar() {
   const navigate = useNavigate(); //inicializamos el hook de la navegacion, que nos permite redirigirnos a otra pagina
+  const { t, i18n } = useTranslation(); //t es la funcion que traduce los textos, i18n es el objeto que maneja el idioma actual
   const [anchorElNav, setAnchorElNav] = React.useState(null); //guardamos el elemento del dom donde se ancla el menu mobile
 
   const handleOpenNavMenu = (event) => {
@@ -30,13 +32,18 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
+  const toggleIdioma = () => {
+    const nuevoIdioma = i18n.language === 'es' ? 'en' : 'es'; //si el idioma actual es español, cambia a ingles y viceversa
+    i18n.changeLanguage(nuevoIdioma); //cambia el idioma de toda la app
+  };
+
   return (
     <AppBar position="static" className="navbar">
       <Container maxWidth={false} sx={{ px: 4 }}>
         <Toolbar disableGutters>
 
           {/* DESKTOP - logo e ícono */}
-          
+
           <Typography
             variant="h6"
             noWrap
@@ -78,14 +85,13 @@ function ResponsiveAppBar() {
                   className="navbar-menu-item"
                   onClick={() => { navigate(page.path); handleCloseNavMenu(); }}
                 >
-                  <Typography sx={{ textAlign: 'center' }}>{page.label}</Typography>
+                  <Typography sx={{ textAlign: 'center' }}>{t(page.label)}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
           {/* MOBILE - logo e ícono */}
-     
           <Typography
             variant="h5"
             noWrap
@@ -106,11 +112,15 @@ function ResponsiveAppBar() {
                 onClick={() => navigate(page.path)}
                 sx={{ my: 2, display: 'block', px: 2 }}
               >
-                {page.label}
+                {t(page.label)} {/* t() traduce la clave al idioma actual */}
               </Button>
             ))}
           </Box>
 
+          {/* BOTÓN CAMBIO DE IDIOMA */}
+          <Button className="navbar-button navbar-lang-btn" onClick={toggleIdioma} sx={{ my: 2, px: 2 }}>
+            {i18n.language === 'es' ? 'EN' : 'ES'}
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>
