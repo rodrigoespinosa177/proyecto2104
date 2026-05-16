@@ -4,13 +4,19 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
 import Navbar from './components/Navbar.jsx'
+import { UserProvider } from './context/UserContext.jsx'
+import { CarritoProvider } from './context/CarritoContext.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <Navbar />
-      <App />
+      <UserProvider>
+        <CarritoProvider>
+          <Navbar />
+          <App />
+        </CarritoProvider>
+      </UserProvider>
     </BrowserRouter>
 
   </StrictMode>
