@@ -77,16 +77,13 @@
 
 /* BOTON IDIOMA */
 
-.navbar-lang-btn {
-  color: var(--text-h) !important;
+.navbar-lang-btn:hover {
+  background-color: var(--accent-bg) !important;
 
-  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
 
-  border-radius: 6px !important;
-
-  font-weight: 700 !important;
-
-  min-width: 48px !important;
+  border-color: var(--accent) !important;
+}
 
   transition:
     background 0.2s ease,
