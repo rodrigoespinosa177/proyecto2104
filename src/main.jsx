@@ -1,22 +1,30 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
+import './index.css'
+import App from './App.jsx'
+import Navbar from './components/Navbar.jsx'
+import { UserProvider } from './context/UserContext.jsx'
+import { CarritoProvider } from './context/CarritoContext.jsx'
 import "./i18n";
-import App from "./App.jsx";
-import Navbar from "./components/Navbar.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 import { ContadorProvider } from './context/ContadorContext'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <ContadorProvider>
-          <Navbar />
-          <App />
-        </ContadorProvider>
+        <UserProvider>
+          <CarritoProvider>
+            <ContadorProvider>
+              <Navbar />
+              <App />
+            </ContadorProvider>
+        </CarritoProvider>
+        </UserProvider>
       </ThemeProvider>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
+

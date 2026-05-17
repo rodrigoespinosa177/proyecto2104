@@ -15,11 +15,12 @@ import "./Navbar.css";
 import ThemeToggle from "./ThemeToggle";
 import { useContador } from "../context/ContadorContext";
 
-const pages = [
-  //creamos un array para recorrer las paginas
-  { label: "navbar.home", path: "/" }, //con el path podemos acceder a las rutas que se navegan cuando hacemos click
-  { label: "navbar.listas", path: "/listas" },
-  { label: "navbar.tarea", path: "/tarea" },
+const pages = [ //creamos un array para recorrer las paginas 
+  { label: 'Home', path: '/' }, //con el path podemos acceder a las rutas que se navegan cuando hacemos click
+  { label: 'Listas de personas', path: '/listas' },
+  { label: 'Listas de tareas', path: '/tarea' },
+  { label: 'Login', path: '/login' },
+  { label: 'Carrito', path: '/carrito' },
 ];
 
 function ResponsiveAppBar() {
