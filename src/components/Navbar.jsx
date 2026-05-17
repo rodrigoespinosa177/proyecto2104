@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 import ThemeToggle from "./ThemeToggle";
-import { useContador } from '../context/ContadorContext'
+import { useContador } from "../context/ContadorContext";
 
 const pages = [
   //creamos un array para recorrer las paginas
@@ -36,7 +36,7 @@ function ResponsiveAppBar() {
   };
 
   const toggleIdioma = () => {
-    const nuevoIdioma = i18n.language === 'es' ? 'en' : 'es'; //si el idioma actual es español, cambia a ingles y viceversa
+    const nuevoIdioma = i18n.language === "es" ? "en" : "es"; //si el idioma actual es español, cambia a ingles y viceversa
     i18n.changeLanguage(nuevoIdioma); //cambia el idioma de toda la app
   };
 
@@ -134,23 +134,56 @@ function ResponsiveAppBar() {
           {/* BOTÓN CAMBIO DE IDIOMA */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <ThemeToggle />
-            <Box sx={{
-              display: 'flex',
-              alignItems: 'center',
-              backgroundColor: 'rgba(144, 202, 249, 0.1)',
-              border: '1px solid #90caf9',
-              borderRadius: '8px',
-              px: 1,
-              mr: 1
-            }}>
-              <Button className="navbar-button" onClick={decrementar} sx={{ my: 0, px: 1, minWidth: '30px' }}>-</Button>
-              <Typography sx={{ color: '#90caf9', fontWeight: 700, fontSize: '1rem', mx: 1 }}>{contador}</Typography>
-              <Button className="navbar-button" onClick={incrementar} sx={{ my: 0, px: 1, minWidth: '30px' }}>+</Button>
-              <Button className="navbar-button" onClick={resetear} sx={{ my: 0, px: 1, fontSize: '0.75rem' }}>Reset</Button>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                backgroundColor: "rgba(144, 202, 249, 0.1)",
+                border: "1px solid #90caf9",
+                borderRadius: "8px",
+                px: 1,
+                mr: 1,
+              }}
+            >
+              <Button
+                className="navbar-button"
+                onClick={decrementar}
+                sx={{ my: 0, px: 1, minWidth: "30px" }}
+              >
+                -
+              </Button>
+              <Typography
+                sx={{
+                  color: "#90caf9",
+                  fontWeight: 700,
+                  fontSize: "1rem",
+                  mx: 1,
+                }}
+              >
+                {contador}
+              </Typography>
+              <Button
+                className="navbar-button"
+                onClick={incrementar}
+                sx={{ my: 0, px: 1, minWidth: "30px" }}
+              >
+                +
+              </Button>
+              <Button
+                className="navbar-button"
+                onClick={resetear}
+                sx={{ my: 0, px: 1, fontSize: "0.75rem" }}
+              >
+                Reset
+              </Button>
             </Box>
 
-            <Button className="navbar-button navbar-lang-btn" onClick={toggleIdioma} sx={{ my: 2, px: 2 }}>
-              {i18n.language === 'es' ? 'EN' : 'ES'}
+            <Button
+              className="navbar-button navbar-lang-btn"
+              onClick={toggleIdioma}
+              sx={{ my: 2, px: 2 }}
+            >
+              {i18n.language === "es" ? "EN" : "ES"}
             </Button>
           </Box>
         </Toolbar>
