@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUsuario } from '../context/UserContext';
+import { useTranslation } from 'react-i18next';
 import './Login.css';
 
 const USUARIOS_FAKE = [
@@ -12,6 +13,7 @@ const USUARIOS_FAKE = [
 function Login() {
   const navigate = useNavigate();
   const { login } = useUsuario();
+  const { t } = useTranslation();
 
   const [usuario, setUsuario] = useState('');
   const [contrasena, setContrasena] = useState('');
@@ -26,7 +28,7 @@ function Login() {
       login(encontrado.usuario, encontrado.rol);
       navigate('/');
     } else {
-      setError('Usuario o contraseña incorrectos');
+      setError(t('auth.errorMsg'));
     }
   };
 
@@ -34,11 +36,11 @@ function Login() {
     <div className="login-container">
       <div className="login-card">
 
-        <h2 className="login-titulo">Iniciar sesión</h2>
+        <h2 className="login-titulo">{t('auth.login')}</h2>
 
         <input
           type="text"
-          placeholder="Usuario"
+          placeholder={t('auth.userPlaceholder')}
           value={usuario}
           onChange={(e) => setUsuario(e.target.value)}
           className="login-input"
@@ -46,7 +48,7 @@ function Login() {
 
         <input
           type="password"
-          placeholder="Contraseña"
+          placeholder={t('auth.contrasena')}
           value={contrasena}
           onChange={(e) => setContrasena(e.target.value)}
           className="login-input"
@@ -55,11 +57,11 @@ function Login() {
         {error && <p className="login-error">{error}</p>}
 
         <button className="login-btn" onClick={handleLogin}>
-          Entrar
+          {t('auth.entrar')}
         </button>
 
         <p className="login-hint">
-          Usuarios de prueba: <b>admin/1234</b> · <b>rodrigo/abcd</b> · <b>invitado/0000</b>
+          {t('auth.hint')} <b>admin/1234</b> · <b>rodrigo/2106</b> · <b>invitado/0000</b>
         </p>
 
       </div>

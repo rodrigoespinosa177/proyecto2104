@@ -15,18 +15,18 @@ import "./Navbar.css";
 import ThemeToggle from "./ThemeToggle";
 import { useContador } from "../context/ContadorContext";
 
-const pages = [ //creamos un array para recorrer las paginas 
-  { label: 'Home', path: '/' }, //con el path podemos acceder a las rutas que se navegan cuando hacemos click
-  { label: 'Listas de personas', path: '/listas' },
-  { label: 'Listas de tareas', path: '/tarea' },
-  { label: 'Login', path: '/login' },
-  { label: 'Carrito', path: '/carrito' },
+const pages = [ // creamos un array para recorrer las paginas con claves de traduccion
+  { label: 'navbar.home', path: '/' }, 
+  { label: 'navbar.listas', path: '/listas' },
+  { label: 'navbar.tarea', path: '/tarea' },
+  { label: 'navbar.login', path: '/login' },
+  { label: 'navbar.carrito', path: '/carrito' },
 ];
 
 function ResponsiveAppBar() {
-  const navigate = useNavigate(); //inicializamos el hook de la navegacion, que nos permite redirigirnos a otra pagina
-  const { t, i18n } = useTranslation(); //t es la funcion que traduce los textos, i18n es el objeto que maneja el idioma actual
-  const [anchorElNav, setAnchorElNav] = React.useState(null); //guardamos el elemento del dom donde se ancla el menu mobile
+  const navigate = useNavigate(); // inicializamos el hook de la navegacion, que nos permite redirigirnos a otra pagina
+  const { t, i18n } = useTranslation(); // t es la funcion que traduce los textos, i18n es el objeto que maneja el idioma actual
+  const [anchorElNav, setAnchorElNav] = React.useState(null); // guardamos el elemento del dom donde se ancla el menu mobile
   const { contador, incrementar, decrementar, resetear } = useContador();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -37,8 +37,8 @@ function ResponsiveAppBar() {
   };
 
   const toggleIdioma = () => {
-    const nuevoIdioma = i18n.language === "es" ? "en" : "es"; //si el idioma actual es español, cambia a ingles y viceversa
-    i18n.changeLanguage(nuevoIdioma); //cambia el idioma de toda la app
+    const nuevoIdioma = i18n.language === "es" ? "en" : "es"; // si el idioma actual es español, cambia a ingles y viceversa
+    i18n.changeLanguage(nuevoIdioma); // cambia el idioma de toda la app
   };
 
   return (
@@ -84,7 +84,7 @@ function ResponsiveAppBar() {
             >
               {pages.map(
                 (
-                  page, //recorremos el array y crea un menu item por cada uno, y al hacer click navega a la ruta y cierra el menu
+                  page, // recorremos el array y crea un menu item por cada uno, y al hacer click navega a la ruta y cierra el menu
                 ) => (
                   <MenuItem
                     key={page.label}
