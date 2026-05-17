@@ -1,4 +1,4 @@
-{
+﻿{
   "navbar": {
     "home": "Home",
     "auth": "Login / Register",
@@ -8,7 +8,50 @@
   },
   "home": {
     "titulo": "Argentine Football Teams",
-    "subtitulo": "The passion that moves an entire country"
+    "subtitulo": "The passion that moves an entire country",
+    "hero": {
+      "title": "This is a React rendering test; we use people lists and task lists with conditional rendering",
+      "subtitle": "HELLO WORLD"
+    }
+  },
+  "list": {
+    "searchPlaceholder": "🔍 Search by name...",
+    "noResults": "No results found",
+    "knownFor": "known for {{accomplishment}}"
+  },
+  "profession": {
+    "todas": "all",
+    "matematica": "mathematician",
+    "quimico": "chemist",
+    "quimica": "chemist",
+    "fisico": "physicist",
+    "astrofisico": "astrophysicist",
+    "matematico": "mathematician"
+  },
+  "accomplishment": {
+    "spaceflightCalculations": "spaceflight calculations",
+    "ozoneHoleDiscovery": "the discovery of the ozone hole in the Arctic",
+    "electromagnetismTheory": "the theory of electromagnetism",
+    "cortisonePioneer": "being a pioneer in the use of cortisone, steroids and birth control pills",
+    "whiteDwarfMassCalculations": "the mass calculations of white dwarf stars",
+    "firstProgrammer": "being the first programmer in history",
+    "relativityTheory": "the theory of relativity",
+    "poloniumRadiumDiscovery": "the discovery of polonium and radium",
+    "computerScienceFoundations": "the foundations of modern computing",
+    "acCurrentDevelopment": "the development of alternating current",
+    "dnaStructureDiscovery": "the discovery of the DNA structure",
+    "blackHoleRadiationTheory": "the theory of black hole radiation",
+    "firstCompiler": "the development of the first programming language compiler",
+    "universalGravitationLaw": "the law of universal gravitation"
+  },
+  "tasks": {
+    "title": "Task List",
+    "noTasks": "No tasks",
+    "completed": "Completed",
+    "cancel": "Cancel task",
+    "do": "Do task",
+    "learnReact": "Learn React",
+    "doExercise": "Do exercise"
   },
   "auth": {
     "login": "Login",
@@ -17,5 +60,9 @@
     "contrasena": "Password",
     "nombre": "Name",
     "ingresar": "Sign In"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
   }
 }

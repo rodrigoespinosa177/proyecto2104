@@ -8,19 +8,23 @@ import { UserProvider } from './context/UserContext.jsx'
 import { CarritoProvider } from './context/CarritoContext.jsx'
 import "./i18n";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
+import { ContadorProvider } from './context/ContadorContext'
 
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <ThemeProvider>
         <UserProvider>
           <CarritoProvider>
-            <Navbar />
-            <App />
-          </CarritoProvider>
+            <ContadorProvider>
+              <Navbar />
+              <App />
+            </ContadorProvider>
+        </CarritoProvider>
         </UserProvider>
-      </BrowserRouter>
-    </ThemeProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   </StrictMode>
 )
+

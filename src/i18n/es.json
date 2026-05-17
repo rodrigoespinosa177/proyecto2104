@@ -1,4 +1,4 @@
-{
+﻿{
   "navbar": {
     "home": "Inicio",
     "auth": "Iniciar Sesión / Registro",
@@ -8,7 +8,50 @@
   },
   "home": {
     "titulo": "Equipos de Fútbol Argentino",
-    "subtitulo": "La pasión que mueve a todo un país"
+    "subtitulo": "La pasión que mueve a todo un país",
+    "hero": {
+      "title": "Esto es una prueba de react para renderizar, utilizamos listas de personas y listas de tareas, mediante una condición",
+      "subtitle": "HOLA MUNDO"
+    }
+  },
+  "list": {
+    "searchPlaceholder": "🔍 Buscar por nombre...",
+    "noResults": "No se encontraron resultados",
+    "knownFor": "conocido/a por {{accomplishment}}"
+  },
+  "profession": {
+    "todas": "todas",
+    "matematica": "matemática",
+    "quimico": "químico",
+    "quimica": "química",
+    "fisico": "físico",
+    "astrofisico": "astrofísico",
+    "matematico": "matemático"
+  },
+  "accomplishment": {
+    "spaceflightCalculations": "los cálculos de vuelos espaciales",
+    "ozoneHoleDiscovery": "el descubrimiento del agujero de ozono en el Ártico",
+    "electromagnetismTheory": "la teoría del electromagnetismo",
+    "cortisonePioneer": "ser pionero en el uso de cortisona, esteroides y píldoras anticonceptivas",
+    "whiteDwarfMassCalculations": "los cálculos de masa de estrellas enanas blancas",
+    "firstProgrammer": "ser la primera programadora de la historia",
+    "relativityTheory": "la teoría de la relatividad",
+    "poloniumRadiumDiscovery": "el descubrimiento del polonio y el radio",
+    "computerScienceFoundations": "los fundamentos de la computación moderna",
+    "acCurrentDevelopment": "el desarrollo de la corriente alterna",
+    "dnaStructureDiscovery": "el descubrimiento de la estructura del ADN",
+    "blackHoleRadiationTheory": "la teoría de la radiación de los agujeros negros",
+    "firstCompiler": "el desarrollo del primer compilador de lenguaje de programación",
+    "universalGravitationLaw": "la ley de la gravitación universal"
+  },
+  "tasks": {
+    "title": "Lista de Tareas",
+    "noTasks": "No hay tareas",
+    "completed": "Completada",
+    "cancel": "Cancelar tarea",
+    "do": "Realizar tarea",
+    "learnReact": "Aprender React",
+    "doExercise": "Hacer ejercicio"
   },
   "auth": {
     "login": "Iniciar Sesión",
@@ -17,5 +60,9 @@
     "contrasena": "Contraseña",
     "nombre": "Nombre",
     "ingresar": "Ingresar"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro"
   }
 }
