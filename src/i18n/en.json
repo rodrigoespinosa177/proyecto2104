@@ -4,7 +4,9 @@
     "auth": "Login / Register",
     "teams": "Teams",
     "listas": "People lists",
-    "tarea": "Task lists"
+    "tarea": "Task lists",
+    "login": "Login",
+    "carrito": "Cart"
   },
   "home": {
     "titulo": "Argentine Football Teams",
@@ -54,15 +56,44 @@
     "doExercise": "Do exercise"
   },
   "auth": {
-    "login": "Login",
+    "login": "Log In",
     "registro": "Register",
     "email": "Email",
     "contrasena": "Password",
     "nombre": "Name",
-    "ingresar": "Sign In"
+    "ingresar": "Sign In",
+    "userPlaceholder": "Username",
+    "errorMsg": "Incorrect username or password",
+    "entrar": "Sign In",
+    "hint": "Test users: ",
+    "roles": {
+      "administrador": "administrator",
+      "usuario": "user",
+      "invitado": "guest"
+    }
   },
   "theme": {
     "light": "Light",
     "dark": "Dark"
+  },
+  "cart": {
+    "noAuth": "🔒 You must log in to view the cart",
+    "goToLogin": "Go to Login",
+    "welcome": "Hello {{nombre}} — role: {{rol}}",
+    "availableProducts": "Available products",
+    "addBtn": "+ Add",
+    "myCart": "My cart ({{cantidad}} items)",
+    "emptyCart": "The cart is empty",
+    "total": "Total: ",
+    "clearCart": "🗑️ Empty cart",
+    "checkout": "✅ Checkout",
+    "alertSuccess": "Purchase completed successfully",
+    "products": {
+      "keyboard": "Mechanical keyboard",
+      "mouse": "Wireless mouse",
+      "monitor": "24\" Monitor",
+      "headphones": "Headphones",
+      "webcam": "HD Webcam"
+    }
   }
 }

@@ -4,7 +4,9 @@
     "auth": "Iniciar Sesión / Registro",
     "teams": "Equipos",
     "listas": "Listas de personas",
-    "tarea": "Listas de tareas"
+    "tarea": "Listas de tareas",
+    "login": "Iniciar Sesión",
+    "carrito": "Carrito"
   },
   "home": {
     "titulo": "Equipos de Fútbol Argentino",
@@ -54,15 +56,44 @@
     "doExercise": "Hacer ejercicio"
   },
   "auth": {
-    "login": "Iniciar Sesión",
+    "login": "Iniciar sesión",
     "registro": "Registrarse",
     "email": "Email",
     "contrasena": "Contraseña",
     "nombre": "Nombre",
-    "ingresar": "Ingresar"
+    "ingresar": "Ingresar",
+    "userPlaceholder": "Usuario",
+    "errorMsg": "Usuario o contraseña incorrectos",
+    "entrar": "Entrar",
+    "hint": "Usuarios de prueba: ",
+    "roles": {
+      "administrador": "administrador",
+      "usuario": "usuario",
+      "invitado": "invitado"
+    }
   },
   "theme": {
     "light": "Claro",
     "dark": "Oscuro"
+  },
+  "cart": {
+    "noAuth": "🔒 Tenés que iniciar sesión para ver el carrito",
+    "goToLogin": "Ir al Login",
+    "welcome": "Hola {{nombre}} — rol: {{rol}}",
+    "availableProducts": "Productos disponibles",
+    "addBtn": "+ Agregar",
+    "myCart": "Mi carrito ({{cantidad}} ítems)",
+    "emptyCart": "El carrito está vacío",
+    "total": "Total: ",
+    "clearCart": "🗑️ Vaciar carrito",
+    "checkout": "✅ Finalizar compra",
+    "alertSuccess": "Compra realizada con éxito",
+    "products": {
+      "keyboard": "Teclado mecánico",
+      "mouse": "Mouse inalámbrico",
+      "monitor": "Monitor 24\"",
+      "headphones": "Auriculares",
+      "webcam": "Webcam HD"
+    }
   }
 }
