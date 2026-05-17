@@ -72,7 +72,7 @@ body.dark {
 
   --social-bg: rgba(47, 48, 58, 0.5);
 
-  --hero-overlay: rgba(0, 0, 0, 0.65);
+  --hero-overlay: var(--bg);
 
   --shadow:
     rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
@@ -84,6 +84,12 @@ body.dark #social .button-icon {
 }
 
 /*GLOBAL/GENERAL*/
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
 
 body {
   margin: 0;
@@ -97,7 +103,7 @@ body {
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
 
   max-width: 100%;
 
