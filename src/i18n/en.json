@@ -1,0 +1,21 @@
+{
+  "navbar": {
+    "home": "Home",
+    "auth": "Login / Register",
+    "teams": "Teams",
+    "listas": "People lists",
+    "tarea": "Task lists"
+  },
+  "home": {
+    "titulo": "Argentine Football Teams",
+    "subtitulo": "The passion that moves an entire country"
+  },
+  "auth": {
+    "login": "Login",
+    "registro": "Register",
+    "email": "Email",
+    "contrasena": "Password",
+    "nombre": "Name",
+    "ingresar": "Sign In"
+  }
+}
