@@ -60,5 +60,9 @@
     "contrasena": "Contraseña",
     "nombre": "Nombre",
     "ingresar": "Ingresar"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro"
   }
 }

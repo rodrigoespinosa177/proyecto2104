@@ -77,14 +77,7 @@
 
 /* BOTON IDIOMA */
 
-.navbar-lang-btn:hover {
-  background-color: var(--accent-bg) !important;
-
-  color: var(--accent) !important;
-
-  border-color: var(--accent) !important;
-}
-
+.navbar-lang-btn {
   transition:
     background 0.2s ease,
     color 0.2s ease,
@@ -92,7 +85,9 @@
 }
 
 .navbar-lang-btn:hover {
-  background-color: var(--accent) !important;
+  background-color: var(--accent-bg) !important;
 
-  color: var(--bg) !important;
+  color: var(--accent) !important;
+
+  border-color: var(--accent) !important;
 }
