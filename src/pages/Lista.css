@@ -1,7 +1,9 @@
 .list-container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 24px 4vw;
+  box-sizing: border-box;
 }
 
 .list-buscador {
@@ -35,9 +37,9 @@
 
 .list-botones {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .list-boton {

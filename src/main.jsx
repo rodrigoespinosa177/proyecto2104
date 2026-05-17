@@ -6,14 +6,17 @@ import "./i18n";
 import App from "./App.jsx";
 import Navbar from "./components/Navbar.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
+import { ContadorProvider } from './context/ContadorContext'
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider>
-      <BrowserRouter>
-        <Navbar />
-        <App />
-      </BrowserRouter>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider>
+        <ContadorProvider>
+          <Navbar />
+          <App />
+        </ContadorProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   </StrictMode>,
-);
+)
